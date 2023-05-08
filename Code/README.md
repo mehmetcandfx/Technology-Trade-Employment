@@ -39,11 +39,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <b>The research question to answer is:</b><br>
-How did the recent developments in technology and offshoring activity in European Union affected demand for different skills and earnings of different occupations in late 20th and 21st Century?
+How did the recent developments in technology and offshoring activity in European Union affect the demand for different skills and earnings of different occupations in the 21st Century?
 
 <b>Tasks to Do:</b><br>
 `Data Discovery`<br>
-`Data Preperation`<br>
+`Data Preparation`<br>
 `Data Analysis-Visualization`<br>
 `Theory-Offshoring Modelling`<br>
 `Empiric Tests`<br>
