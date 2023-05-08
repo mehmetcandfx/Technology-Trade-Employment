@@ -37,9 +37,9 @@
 <h3 align="center">Skills, Tasks and Occupations</h3>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
-<b>The research question to answer is:</b><br>
-How did the recent developments in technology and offshoring activity in European Union affect the demand for different skills and earnings of different occupations in the 21st Century?
+## Data
+<b align="left">
+How did the recent developments in technology and offshoring activity in European Union affect the demand for different skills and earnings of different occupations in the 21st Century? </b><br>
 
 <b>Tasks to Do:</b><br>
 `Data Discovery`<br>
