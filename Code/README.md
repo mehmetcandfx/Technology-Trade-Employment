@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="Images/Uva_logo.svg.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/mehmetcandfx/Technology_Trade_Employment/tree/main/Images/Uva_logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Skills, Tasks and Occupations</h3>
