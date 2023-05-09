@@ -1,10 +1,21 @@
 import pandas as pd
 import os
-cwd=os.getcwd()#[:-4]
-#print(cwd)
-df18 = pd.read_csv(f'{cwd}/Data/Eurostat/csv/EARN_SES18_14.csv')
-#df14 = pd.read_csv(f'{cwd}Data/Eurostat/csv/EARN_SES14_14.csv')
-#df10 = pd.read_csv(f'{cwd}Data/Eurostat/csv/EARN_SES10_14.csv')
-#df06 = pd.read_csv(f'{cwd}Data/Eurostat/csv/EARN_SES06_14.csv')
+import utilities as u
+import eurostat
 
-df18.describe(include='all')
+db=["EARN_SES06_14","EARN_SES10_14","EARN_SES14_14","EARN_SES18_14"]
+
+
+
+df=pd.DataFrame()
+for ds in db:
+    dftemp = pd.DataFrame({
+        'Dataset': [ds for i in eurostat.get_pars(ds)],
+        'Year': [ 2000+int(ds[-5:-3]) for i in eurostat.get_pars(ds)], 
+        'Category' : eurostat.get_pars(ds),
+        '#ofUniques': [len(eurostat.get_par_values(ds, i)) for i in  eurostat.get_pars(ds)],
+        'Uniques': [eurostat.get_par_values(ds, i) for i in  eurostat.get_pars(ds)]
+        })
+    df = pd.concat([df, dftemp], ignore_index=True)
+print(df)
+
