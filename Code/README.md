@@ -34,12 +34,14 @@
     <img src="https://github.com/mehmetcandfx/Technology_Trade_Employment/tree/main/Images/Uva_logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Skills, Tasks and Occupations</h3>
+<h1 align="center">Skills, Tasks and Occupations</h3>
+<h2 align="Left">Data</h2>
 
 <!-- ABOUT THE PROJECT -->
-# Data
+
 <p align="left">
-How did the recent developments in technology and offshoring activity in European Union affect the demand for different skills and earnings of different occupations in the 21st Century? </p><br>
+This study will be conducted as follows, first an explanotary analysis will be 
+</p><br>
 
 <b>Tasks to Do:</b><br>
 `Data Discovery`<br>
@@ -49,6 +51,10 @@ How did the recent developments in technology and offshoring activity in Europea
 `Empiric Tests`<br>
 `Further Discussion`<br>
 `Conclusion ` 
+
+
+<!-- WHO IMPORTS TECHNOLOGY FROM WHOM Leaders Followers--> 
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
