@@ -1,8 +1,7 @@
-# utilities.py
+# wages.py
 
 import pandas as pd
 import os
-import utilities as u
 import eurostat
 
 
@@ -17,5 +16,5 @@ def cat_describer(db):
             'Uniques': [eurostat.get_par_values(ds, i) for i in  eurostat.get_pars(ds)]
             })
         df = pd.concat([df, dftemp], ignore_index=True)
-    
+        df.set_index(['Dataset','Year'])
     return df
