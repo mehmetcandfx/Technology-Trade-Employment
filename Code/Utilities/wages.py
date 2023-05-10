@@ -31,7 +31,7 @@ def cat_explorer(db):
 def cat_describer(db,pars):
     
     df=pd.DataFrame()
-    
+
     for ds in db:
         
         try:
@@ -40,17 +40,19 @@ def cat_describer(db,pars):
             yyyy=2002
 
         for par in pars:
-
             try:
-                dftemp = pd.DataFrame({
-                'Dataset': [ds for i in eurostat.get_dic(ds,par, full=False)],
-                'Year': [ yyyy for i in eurostat.get_dic(ds,par, full=False)], 
-                'Category' : [par for i in eurostat.get_dic(ds,par, full=False)],
-                '#Descriptions': [eurostat.get_dic(ds,pars, full=False)]
-                })
-                df = pd.concat([df, dftemp], ignore_index=True)
+                eurostat.get_dic(ds,par, full=False)
             except:
                 pass
-
+            else:
+                dftemp = pd.DataFrame({
+                    'Dataset': [ds for i in eurostat.get_dic(ds,par, full=False)],
+                    'Year': [ yyyy for i in eurostat.get_dic(ds,par, full=False)], 
+                    'Category' : [par for i in eurostat.get_dic(ds,par, full=False)],
+                    'Descriptions': eurostat.get_dic(ds,par, full=False)
+                })
+                df = pd.concat([df, dftemp], ignore_index=True)
+    
     df.set_index(['Dataset','Year'])
+    
     return df
