@@ -42,8 +42,6 @@ def cat_describer(db,pars):
         for par in pars:
 
             try:
-                eurostat.get_dic(ds,pars, full=False)
-
                 dftemp = pd.DataFrame({
                 'Dataset': [ds for i in eurostat.get_dic(ds,par, full=False)],
                 'Year': [ yyyy for i in eurostat.get_dic(ds,par, full=False)], 
