@@ -5,12 +5,11 @@ import os
 import eurostat
 
 
-def cat_describer(db):
+def cat_explorer(db):
     
     df=pd.DataFrame()
     for ds in db:
-        
-        print(ds[-5:-3])
+
         try:
             yyyy=2000+ int(ds[-5:-3])
         except:
@@ -25,5 +24,35 @@ def cat_describer(db):
             })
         df = pd.concat([df, dftemp], ignore_index=True)
         
+    df.set_index(['Dataset','Year'])
+    return df
+
+
+def cat_describer(db,pars):
+    
+    df=pd.DataFrame()
+    
+    for ds in db:
+        
+        try:
+            yyyy=2000+ int(ds[-5:-3])
+        except:
+            yyyy=2002
+
+        for par in pars:
+
+            try:
+                eurostat.get_dic(ds,pars, full=False)
+
+                dftemp = pd.DataFrame({
+                'Dataset': [ds for i in eurostat.get_dic(ds,par, full=False)],
+                'Year': [ yyyy for i in eurostat.get_dic(ds,par, full=False)], 
+                'Category' : [par for i in eurostat.get_dic(ds,par, full=False)],
+                '#Descriptions': [eurostat.get_dic(ds,pars, full=False)]
+                })
+                df = pd.concat([df, dftemp], ignore_index=True)
+            except:
+                pass
+
     df.set_index(['Dataset','Year'])
     return df
