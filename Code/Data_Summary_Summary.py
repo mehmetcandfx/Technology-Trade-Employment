@@ -1,19 +1,19 @@
 import pandas as pd
 import os
-import utilities as u
 import eurostat
 
-db=["EARN_SES06_14"]#,"EARN_SES10_14","EARN_SES14_14","EARN_SES18_14"]
+db=["EARN_SES_AGT14","EARN_SES06_14"]#,"EARN_SES10_14","EARN_SES14_14","EARN_SES18_14"]
 
 
 
 df=pd.DataFrame()
 for ds in db:
 
-    try:
-        yyyy=2000+ int(ds[-5:-3])
-    except:
+    print(ds[-5:-2])
+    if ds[-5:-2] == "AGT": 
         yyyy=2000+ int(ds[-8:-6])
+    else:
+        yyyy=2000+ int(ds[-5:-3])
 
     dftemp = pd.DataFrame({
         'Dataset': [ds for i in eurostat.get_pars(ds)],

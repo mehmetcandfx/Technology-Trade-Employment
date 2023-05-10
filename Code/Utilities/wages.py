@@ -9,11 +9,12 @@ def cat_describer(db):
     
     df=pd.DataFrame()
     for ds in db:
-
+        
+        print(ds[-5:-3])
         try:
             yyyy=2000+ int(ds[-5:-3])
         except:
-            yyyy=2000+ int(ds[-8:-6])
+            yyyy=2002
     
         dftemp = pd.DataFrame({
             'Dataset': [ds for i in eurostat.get_pars(ds)],
