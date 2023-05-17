@@ -23,7 +23,7 @@
     <br />
     <i> MSc Economics Thesis, 2023<i>
     <br />
-    <i>Supervisor: Dr. K. Mavromatis<i>  
+    <i>Supervisor: Bérengère Patault<i>  
     <br />
     <br />
   </p>
